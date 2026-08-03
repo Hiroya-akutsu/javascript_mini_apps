@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>数当てゲーム</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <main>
     <h1>数当てゲーム ver.1</h1>
-    <p>1~10までの数字を当てよう！下の入力欄に数字を入力して、正解を探そう！</p>
+    <p>1〜10までの数字を当てよう！下の入力欄に数字を入力して、正解を探そう！</p>
     <form action="">
-      <label for="guess">入力した数値
+      <label for="guess">予想した数値
         <input type="number" min="1" max="10" required id="guess" name="guess">
       </label>
       <button type="submit">送信</button>
-      <button type="reset">リセット</button>
     </form>
-    <p id="massage" aria-live="polite"></p>
+    <p id="message" aria-live="polite"></p>
     <p>挑戦回数: <span id="attempt">0</span>回</p>
+    <button type="reset">リセット</button>
   </main>
 </body>
-<script src="script.js" defer></script>
 </html>
