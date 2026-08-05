@@ -10,8 +10,10 @@
 <body>
   <main>
     <h1>数当てゲーム ver.1</h1>
-    <p>1〜10までの数字を当てよう！下の入力欄に数字を入力して、正解を探そう！</p>
-    <form action="">
+    <p>1〜10までの数字を当てよう！ <br>
+    下の入力欄に数字を入力して、正解を探そう！
+    </p>
+    <form action="" id="guess_form">
       <label for="guess">予想した数値
         <input type="number" min="1" max="10" required id="guess" name="guess">
       </label>
@@ -19,7 +21,7 @@
     </form>
     <p id="message" aria-live="polite"></p>
     <p>挑戦回数: <span id="attempt">0</span>回</p>
-    <button type="reset">リセット</button>
+    <button type="button" id="reset">リセット</button>
   </main>
 </body>
 </html>
