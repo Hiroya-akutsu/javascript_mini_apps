@@ -7,3 +7,6 @@ JavaScriptの学習として作成した数当てゲームです。
 - HTML
 - CSS
 - JavaScript
+
+- ## Pages
+- https://hiroya-akutsu.github.io/javascript_mini_apps/number_guess/
