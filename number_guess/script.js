@@ -35,11 +35,11 @@ guessForm.addEventListener("submit", (event) => {
   }
 });
 
-resetElement.addEventListener("click", (event) => {
+resetElement.addEventListener("click", () => {
   currentNumber = Math.floor(Math.random() * 10) + 1;
   attemptCount = 0;
   attemptElement.textContent = attemptCount;
   message.textContent = "";
   guessInput.value= "";
   guessInput.focus();
-}) 
+});
