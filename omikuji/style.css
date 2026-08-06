@@ -1,0 +1,122 @@
+:root {
+  --paper: #f5f1e8;
+  --ink: #27231f;
+  --vermilion: #a33a2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--ink);
+  background-color: #ded7c8;
+  background-image:
+    linear-gradient(rgba(39, 35, 31, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(39, 35, 31, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.omikuji {
+  position: relative;
+  width: min(100%, 460px);
+  min-height: 480px;
+  padding: 64px 48px 48px;
+  overflow: hidden;
+  text-align: center;
+  background: var(--paper);
+  border: 1px solid rgba(39, 35, 31, 0.25);
+  box-shadow: 12px 14px 0 rgba(39, 35, 31, 0.12);
+}
+
+.omikuji::before,
+.omikuji::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  height: 4px;
+  border-block: 1px solid var(--vermilion);
+}
+
+.omikuji::before {
+  top: 24px;
+}
+
+.omikuji::after {
+  bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--vermilion);
+  font-size: 0.8rem;
+  letter-spacing: 0.45em;
+}
+
+h1 {
+  margin: 0 0 40px;
+  font-size: clamp(2.8rem, 12vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-indent: 0.18em;
+}
+
+button {
+  min-width: 180px;
+  padding: 14px 24px;
+  color: var(--paper);
+  background: var(--vermilion);
+  border: 1px solid var(--vermilion);
+  border-radius: 2px;
+  font: inherit;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+  color: var(--vermilion);
+  background: transparent;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:focus-visible {
+  outline: 3px solid rgba(163, 58, 43, 0.3);
+  outline-offset: 4px;
+}
+
+#result {
+  display: grid;
+  min-height: 112px;
+  margin: 32px 0 0;
+  place-items: center;
+  color: var(--vermilion);
+  font-size: clamp(2rem, 9vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-indent: 0.2em;
+}
+
+@media (max-width: 520px) {
+  .omikuji {
+    min-height: 440px;
+    padding: 56px 24px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
