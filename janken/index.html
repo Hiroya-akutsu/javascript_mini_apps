@@ -7,7 +7,20 @@
   <title>じゃんけん</title>
 </head>
 <body>
-  
+  <main>
+    <h1>じゃんけん</h1>
+    <p>出す手を選択して相手に勝利しよう！</p>
+
+    <p>相手の手</p>
+    <p id="opponent-hand" aria-live="polite"></p>
+
+    <p id="result" aria-live="polite"></p>
+
+    <p>何を出す？</p>
+    <button type="button" data-hand="rock">グー</button>
+    <button type="button" data-hand="scissors">チョキ</button>
+    <button type="button" data-hand="paper">パー</button>
+  </main>
 <script src="script.js"></script>
 </body>
 </html>
