@@ -1,4 +1,4 @@
-# Number Guess Game
+# Omikuji
 
 ## 概要
 JavaScriptの学習として作成したおみくじです。

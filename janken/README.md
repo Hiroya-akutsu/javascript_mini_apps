@@ -1,4 +1,4 @@
-# Number Guess Game
+# Janken
 
 ## 概要
 JavaScriptの学習として作成したじゃんけんゲームです。
