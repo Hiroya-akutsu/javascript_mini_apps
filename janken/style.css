@@ -117,6 +117,33 @@ button[data-hand]:focus-visible {
   outline-offset: 3px;
 }
 
+#reset {
+  display: block;
+  margin: 24px auto 0;
+  padding: 8px 4px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: #77746d;
+  background: transparent;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+#reset:hover {
+  color: #20201e;
+  border-bottom-color: #20201e;
+}
+
+#reset:focus-visible {
+  outline: 3px solid rgb(239 91 69 / 35%);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 @media (max-width: 400px) {
   main {
     padding-inline: 20px;
@@ -128,7 +155,8 @@ button[data-hand]:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  button[data-hand] {
+  button[data-hand],
+  #reset {
     transition: none;
   }
 }

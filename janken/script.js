@@ -17,6 +17,9 @@ const showOpponentHand = document.getElementById('opponent-hand');
 // 結果を通知する要素を取得
 const showResult = document.getElementById('result');
 
+// リセットボタンの要素を取得
+const resetButton = document.getElementById('reset');
+
 // じゃんけんの処理
 handButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -45,4 +48,10 @@ handButtons.forEach((button) => {
     // 結果を表示
     showResult.textContent = result;
   });
+});
+
+// リセットボタンの処理
+resetButton.addEventListener('click', () => {
+  showOpponentHand.textContent = '';
+  showResult.textContent = '';
 });
