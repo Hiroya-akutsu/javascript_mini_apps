@@ -20,7 +20,46 @@ const projects = [
     label: "03 / Rock, scissors, paper",
     meta: "JavaScript / Game",
     title: "Janken",
-    description: "シンプルなじゃんけんアプリ",
+    description: "シンプルなじゃんけんアプリ。",
     url: "./janken/",
+  },
+  {
+    mark: "体",
+    label: "04 / BMI Calculator",
+    meta: "JavaScript / Tool",
+    title: "BMI Calculator",
+    description: "身長と体重からBMIを計算するアプリ。",
+    url: "./BMI_calculator/",
   }
 ]
+
+const projectButtons = document.querySelectorAll(".project__marks button");
+
+const projectTitle = document.querySelector(".project__info h3");
+
+const projectDescription = document.querySelector(".project__description");
+
+const projectLink = document.querySelector(".text-link");
+
+projectButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const index = button.dataset.projectIndex;
+    const selectProject = projects[index];
+
+    // まだ追加していないアプリに関しては、早期リターンする
+    if (!selectProject) {
+      return;
+    }
+
+    projectButtons.forEach((projectButton) => {
+      projectButton.classList.remove("is-active");
+    });
+    button.classList.add("is-active");
+
+    projectTitle.textContent = selectProject.title;
+
+    projectDescription.textContent = selectProject.description;
+
+    projectLink.href = selectProject.url;
+  });
+});

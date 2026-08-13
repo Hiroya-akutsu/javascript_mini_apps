@@ -183,6 +183,7 @@ h1 span:nth-child(3) {
   border-right: 1px solid #686868;
   border-bottom: 1px solid #686868;
   cursor: pointer;
+  transition: color 220ms ease, background-color 220ms ease;
 }
 
 .project__marks button:nth-child(3n) {
@@ -190,7 +191,9 @@ h1 span:nth-child(3) {
   font-weight: 700;
 }
 
-.project__marks button:last-child {
+.project__marks button:hover,
+.project__marks button:focus-visible,
+.project__marks button.is-active {
   color: #111111;
   background: #f5f5f1;
 }
