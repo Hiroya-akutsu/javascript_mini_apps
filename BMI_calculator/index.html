@@ -11,14 +11,14 @@
   <p>身長と体重を入力してBMIを測定できます</p>
   <form id="calculator">
     <label for="height">身長
-      <input type="number" id="height" name="height" required min="0" step="any">cm
+      <input type="number" id="height" name="height" required min="0.1" step="any">cm
     </label>
     <label for="weight">体重
-      <input type="number" id="weight" name="weight" required min="0" step="any">kg
+      <input type="number" id="weight" name="weight" required min="0.1" step="any">kg
     </label>
     <button type="submit" id="calculation_button">計算</button>
   </form>
-  <p class="result" aria-live="polite"></p>
+  <p class="result" id="result" aria-live="polite"></p>
   <button type="button" id="reset">もう一度計算する</button>
 <script src="script.js"></script>
 </body>
