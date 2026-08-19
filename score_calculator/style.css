@@ -1,0 +1,164 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+  color: #263238;
+  background: #f3f6f5;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  place-items: center;
+  background:
+    linear-gradient(rgb(255 255 255 / 45%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 45%) 1px, transparent 1px),
+    #e9f0ed;
+  background-size: 24px 24px;
+}
+
+main {
+  width: min(100%, 520px);
+  padding: clamp(28px, 7vw, 48px);
+  border: 1px solid #d8e2de;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgb(37 73 63 / 12%);
+}
+
+h1 {
+  margin: 0;
+  color: #246b5b;
+  font-size: clamp(2rem, 8vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+main > p:first-of-type {
+  margin: 16px 0 32px;
+  color: #61716d;
+  line-height: 1.8;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+label {
+  display: grid;
+  grid-template-columns: 4em minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid #b9cbc5;
+  border-radius: 10px;
+  color: inherit;
+  background: #f9fbfa;
+  font: inherit;
+  font-size: 1.1rem;
+  text-align: right;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:hover {
+  border-color: #7fa297;
+}
+
+input:focus {
+  border-color: #2f806d;
+  outline: none;
+  box-shadow: 0 0 0 4px rgb(47 128 109 / 16%);
+}
+
+input:user-invalid {
+  border-color: #c65353;
+}
+
+button {
+  min-height: 50px;
+  margin-top: 6px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #2f806d;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+  background: #246b5b;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:focus-visible {
+  outline: 3px solid rgb(47 128 109 / 30%);
+  outline-offset: 3px;
+}
+
+#result {
+  display: grid;
+  min-height: 84px;
+  margin: 28px 0 0;
+  padding: 16px;
+  place-items: center;
+  border: 2px dashed #a9c8bf;
+  border-radius: 14px;
+  color: #246b5b;
+  background: #f4faf8;
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
+  font-weight: 800;
+  text-align: center;
+}
+
+#result:empty::before {
+  content: "結果がここに表示されます";
+  color: #82938e;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 16px;
+  }
+
+  main {
+    padding-inline: 20px;
+  }
+
+  label {
+    grid-template-columns: 3em minmax(0, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  input,
+  button {
+    transition: none;
+  }
+}

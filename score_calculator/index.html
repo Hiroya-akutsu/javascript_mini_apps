@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>score calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>成績表</h1>
+    <p>それぞれの教科の点数を入力してください。合計点に応じて、成績が表示されます。</p>
+    <form>
+      <label for="japanese_language">国語
+        <input type="number" id="japanese_language" data-subject="japanese_language" required min="0" max="100" step="1">
+      </label>
+      <label for="math">数学
+        <input type="number" id="math" data-subject="math" required min="0" max="100" step="1">
+      </label>
+      <label for="social">社会
+        <input type="number" id="social" data-subject="social" required min="0" max="100" step="1">
+      </label>
+      <button type="submit">送信</button>
+    </form>
+    <p aria-live="polite" id="result"></p>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
