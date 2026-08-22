@@ -15,7 +15,7 @@ formElement.addEventListener('submit', (event) => {
   for (const subjectInput of subjectScores) {
     const scoreInput = Number(subjectInput.value);
     score += scoreInput;
-  };
+  }
 
   // 成績の判定
   if (score >= 240) {
@@ -26,5 +26,5 @@ formElement.addEventListener('submit', (event) => {
     result.textContent = 'C'
   } else {
     result.textContent = 'D'
-  };
+  }
 });
