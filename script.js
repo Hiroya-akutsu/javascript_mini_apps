@@ -30,6 +30,14 @@ const projects = [
     title: "BMI Calculator",
     description: "身長と体重からBMIを計算するアプリ。",
     url: "./BMI_calculator/",
+  },
+  {
+    mark: "点",
+    label: "05 / Score Calculator",
+    meta: "JavaScript / Tool",
+    title: "Score Calculator",
+    description: "３教科の点数から成績を表示するアプリです。",
+    url: "./score_calculator/",
   }
 ]
 
